@@ -31,14 +31,14 @@ Before running the controller, install all the required dependencies. By using t
 ```bash
 pip install -r requirements.txt
 ```
-3. Flow of Files
+3. Flow of Files to run
 
-  **collectData.py**  
-   → Collects gesture images and labels for training.
-   
-  **gestureSurf.py**  
-   → Trains the gesture recognition model using collected data and saves the model as `.pth` file.
-   
-  **controller.py**  
-   → Loads the trained model and uses live webcam feed to detect gestures and control the game.
+**collectData.py**  
+ → Collects gesture images and labels for training.
+ 
+**gestureSurf.py**  
+ → Trains the gesture recognition model using collected data and saves the model as `.pth` file.
+ 
+**controller.py**  
+ → Loads the trained model and uses live webcam feed to detect gestures and control the game.
 
