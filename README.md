@@ -11,20 +11,11 @@ This project provides a gesture-based controller for the game "Subway Surfers" u
   - **Right Gesture**: Move right (Right arrow key)
   - **No Gesture**: No action
 
-- **Model Integration**: Uses a pre-trained machine learning model (e.g., ResNet-18) to classify hand gestures.
+- **Model Integration**: Uses a pre-trained machine learning model to classify hand gestures.
 - **Real-Time Action Execution**: Actions are mapped to keyboard presses using `pyautogui` to simulate key events.
 - **Confidence Threshold**: Only gestures with a confidence level above a predefined threshold are executed to avoid false positives.
 - **Pause/Resume**: Pause and resume gesture control using the 'p' key.
 - **Webcam Interface**: Displays the live webcam feed and feedback about detected actions.
-
-## Requirements
-
-- Python 3.x
-- OpenCV (`cv2`)
-- PyTorch
-- `torchvision`
-- `pyautogui`
-- NumPy
 
 ## Installation
 
@@ -32,3 +23,22 @@ This project provides a gesture-based controller for the game "Subway Surfers" u
    ```bash
    git clone https://github.com/metthunder/GestureSurf
    cd GestureSurf
+
+2. Install Dependencies
+
+Before running the controller, install all the required dependencies. By using the `requirements.txt` file.
+
+```bash
+pip install -r requirements.txt
+```
+3. Flow of Files
+
+  **collectData.py**  
+   → Collects gesture images and labels for training.
+   
+  **gestureSurf.py**  
+   → Trains the gesture recognition model using collected data and saves the model as `.pth` file.
+   
+  **controller.py**  
+   → Loads the trained model and uses live webcam feed to detect gestures and control the game.
+
